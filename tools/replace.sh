@@ -20,6 +20,6 @@
 list=`find . \( -name "flags.make" -o -name "link.txt" \)`
 
 for i in ${list} ; do
-    cat ${i} | sed -e "s/\-march\=native/\-march\=armv8-a/" | sed -e "s/\-mtune\=native//" > hogefugafuga
+    cat ${i} | sed -e "s/\-march\=native/\-march\=armv8.2-a+sve/" | sed -e "s/\-mtune\=native//" > hogefugafuga
     mv hogefugafuga ${i}
 done
